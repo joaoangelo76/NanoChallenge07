@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  NanoChallenge07
+//  Nano07Challenge
 //
-//  Created by João Ângelo on 24/06/24.
+//  Created by Enrique Carvalho on 24/06/24.
 //
 
 import UIKit
