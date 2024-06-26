@@ -17,6 +17,8 @@
 		3118D2682C2A106300200290 /* Nano07ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118D2672C2A106300200290 /* Nano07ChallengeTests.swift */; };
 		3118D26F2C2A109200200290 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118D26E2C2A109200200290 /* API.swift */; };
 		3118D2712C2A109900200290 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118D2702C2A109900200290 /* Persistence.swift */; };
+		3182279B2C2B59FE006ECEBB /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3182279A2C2B59FE006ECEBB /* CurrencyListViewController.swift */; };
+		3182279D2C2B5A2C006ECEBB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3182279C2C2B5A2C006ECEBB /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		3118D2672C2A106300200290 /* Nano07ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano07ChallengeTests.swift; sourceTree = "<group>"; };
 		3118D26E2C2A109200200290 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		3118D2702C2A109900200290 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3182279A2C2B59FE006ECEBB /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
+		3182279C2C2B5A2C006ECEBB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				3118D2462C2A0E0800200290 /* ViewController.swift */,
+				3182279A2C2B59FE006ECEBB /* CurrencyListViewController.swift */,
+				3182279C2C2B5A2C006ECEBB /* CustomCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 			files = (
 				3118D25F2C2A0EF200200290 /* Model.swift in Sources */,
 				3118D2472C2A0E0800200290 /* ViewController.swift in Sources */,
+				3182279B2C2B59FE006ECEBB /* CurrencyListViewController.swift in Sources */,
 				3118D2432C2A0E0800200290 /* AppDelegate.swift in Sources */,
+				3182279D2C2B5A2C006ECEBB /* CustomCell.swift in Sources */,
 				3118D2712C2A109900200290 /* Persistence.swift in Sources */,
 				3118D25D2C2A0EEA00200290 /* ViewModel.swift in Sources */,
 				3118D26F2C2A109200200290 /* API.swift in Sources */,
@@ -422,7 +430,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HX623XK8T6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Nano07Challenge/Info.plist;
+				INFOPLIST_FILE = Nano07Challenge/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -449,7 +457,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HX623XK8T6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Nano07Challenge/Info.plist;
+				INFOPLIST_FILE = Nano07Challenge/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
