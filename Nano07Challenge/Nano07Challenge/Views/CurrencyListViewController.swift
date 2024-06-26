@@ -8,11 +8,12 @@
 import UIKit
 
 class CurrencyListViewController: UIViewController {
-    
     // MARK: Variables
-    var data: [(String, String)] = [("USD", "Dollar"), ("USD", "Dola"), ("BRL", "Reais"), ("SLA", "Sei la")]
-    var filteredData: [(String, String)] = []
+    var data: [String: String] = ["AED": "United Arab Emirates Dirham",
+                                  "AFN": "Afghan Afghani",]
+    var filteredData: [String : String] = [:]
     var filtered = false
+    var sortOption: SortOptions = .codeAscending
     
     // MARK: UI Components
     lazy var searchField: UITextField = {
@@ -23,6 +24,18 @@ class CurrencyListViewController: UIViewController {
         tf.translatesAutoresizingMaskIntoConstraints = false
         
         return tf
+    }()
+    
+    lazy var sortButton: UIButton = {
+        let btn = UIButton()
+        btn.configuration = .borderedProminent()
+        btn.configuration?.attributedTitle = "Code"
+        btn.setImage(UIImage(systemName: "arrow.up"), for: .normal)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        
+        btn.addTarget(self, action: #selector(sortButtonPress), for: .touchUpInside)
+        
+        return btn
     }()
     
     lazy var tableView: UITableView = {
@@ -43,14 +56,71 @@ class CurrencyListViewController: UIViewController {
     }
     
     // MARK: Functions
+    @objc func sortButtonPress() {
+        changeSortOrder()
+        changeButton()
+    }
+    
+    private func sort(data: [String : String]) -> [(String, String)]{
+        var dataArray = Array(data)
+        
+        switch sortOption {
+        case .nameAscending:
+            dataArray.sort { $0.1 < $1.1 }
+        case .nameDescending:
+            dataArray.sort { $0.1 > $1.1 }
+        case .codeAscending:
+            dataArray.sort { $0.0 < $1.0 }
+        case .codeDescending:
+            dataArray.sort { $0.0 > $1.0 }
+        }
+        
+        return dataArray
+    }
+    
+    private func changeSortOrder() {
+        switch self.sortOption {
+        case .nameAscending:
+            self.sortOption = .nameDescending
+        case .nameDescending:
+            self.sortOption = .codeAscending
+        case .codeAscending:
+            self.sortOption = .codeDescending
+        case .codeDescending:
+            self.sortOption = .nameAscending
+        }
+        tableView.reloadData()
+    }
+    
+    private func changeButton() {
+        switch self.sortOption {
+        case .nameAscending:
+            sortButton.configuration?.attributedTitle = "Name"
+            sortButton.setImage(UIImage(systemName: "arrow.up"), for: .normal)
+        case .nameDescending:
+            sortButton.configuration?.attributedTitle = "Name"
+            sortButton.setImage(UIImage(systemName: "arrow.down"), for: .normal)
+        case .codeAscending:
+            sortButton.configuration?.attributedTitle = "Code"
+            sortButton.setImage(UIImage(systemName: "arrow.up"), for: .normal)
+        case .codeDescending:
+            sortButton.configuration?.attributedTitle = "Code"
+            sortButton.setImage(UIImage(systemName: "arrow.down"), for: .normal)
+        }
+    }
+    
     private func setupUI() {
         view.addSubview(searchField)
         view.addSubview(tableView)
+        view.addSubview(sortButton)
         
         NSLayoutConstraint.activate([
             self.searchField.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
             self.searchField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
             self.searchField.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+            
+            self.sortButton.topAnchor.constraint(equalTo: self.searchField.bottomAnchor, constant: 10),
+            self.sortButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
             
             self.tableView.topAnchor.constraint(equalTo: self.searchField.bottomAnchor, constant: 10),
             self.tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
@@ -65,10 +135,17 @@ class CurrencyListViewController: UIViewController {
         filtered = true
         for (key, value) in data{
             if key.lowercased().starts(with: query.lowercased()) || value.lowercased().starts(with: query.lowercased()) {
-                filteredData.append((key, value))
+                filteredData[key] = value
             }
         }
         tableView.reloadData()
+    }
+    
+    enum SortOptions {
+        case nameAscending
+        case nameDescending
+        case codeAscending
+        case codeDescending
     }
 }
 
@@ -99,12 +176,9 @@ extension CurrencyListViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.id, for: indexPath) as? CustomCell else { return UITableViewCell()}
         
-        let content: (String, String)
-        if !filteredData.isEmpty && filtered{
-            content = filteredData[indexPath.row]
-        } else {
-            content = data[indexPath.row]
-        }
+        let tempData = filtered ? sort(data: filteredData) : sort(data: data)
+        
+        let content = tempData[indexPath.row]
         
         cell.configure(with: content.0, and: content.1)
         return cell
@@ -115,7 +189,8 @@ extension CurrencyListViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        guard let cell = tableView.cellForRow(at: indexPath) as? CustomCell else { return }
+        print(cell.currencyCode.text)
         tableView.deselectRow(at: indexPath, animated: false)
     }
     
