@@ -20,7 +20,7 @@ final class Nano07ChallengeUITests: XCTestCase {
 
     func testSearchBar() throws {
         
-                let app = XCUIApplication()
+        let app = XCUIApplication()
         app.textFields["Start typing to search..."].tap()
         
         let aKey = app/*@START_MENU_TOKEN@*/.keys["A"]/*[[".keyboards.keys[\"A\"]",".keys[\"A\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
