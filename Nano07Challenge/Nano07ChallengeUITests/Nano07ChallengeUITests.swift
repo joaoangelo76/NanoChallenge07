@@ -17,27 +17,42 @@ final class Nano07ChallengeUITests: XCTestCase {
     override func tearDownWithError() throws {
 
     }
+    
+    func testMainButtonsExists() {
+        
+        let app = XCUIApplication()
+        
+        let firstCoinButton = app.buttons["Moeda de Origem"]
+        XCTAssertTrue(firstCoinButton.exists)
+        let secondCoinButton = app/*@START_MENU_TOKEN@*/.staticTexts["Moeda de Destino"]/*[[".buttons[\"Moeda de Destino\"].staticTexts[\"Moeda de Destino\"]",".staticTexts[\"Moeda de Destino\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        XCTAssertTrue(secondCoinButton.exists)
+        let convertButton = app/*@START_MENU_TOKEN@*/.staticTexts["Converter"]/*[[".buttons[\"Converter\"].staticTexts[\"Converter\"]",".staticTexts[\"Converter\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        XCTAssertTrue(convertButton.exists)
+        
+    }
 
+    func testSearchBarExist(){
+        let searchBar = XCUIApplication()/*@START_MENU_TOKEN@*/.textFields["SearchBar"]/*[[".textFields[\"Start typing to search...\"]",".textFields[\"SearchBar\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        XCTAssertTrue(searchBar.exists)
+    }
+    
     func testSearchBar() throws {
         
         let app = XCUIApplication()
-        app.textFields["Start typing to search..."].tap()
+        app.buttons["Moeda de Origem"].tap()
+        app/*@START_MENU_TOKEN@*/.textFields["SearchBar"]/*[[".textFields[\"Start typing to search...\"]",".textFields[\"SearchBar\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
-        let aKey = app/*@START_MENU_TOKEN@*/.keys["A"]/*[[".keyboards.keys[\"A\"]",".keys[\"A\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        aKey.tap()
+        let bKey = app.keys["B"]
+        bKey.tap()
         
-        let fKey = app/*@START_MENU_TOKEN@*/.keys["f"]/*[[".keyboards.keys[\"f\"]",".keys[\"f\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        fKey.tap()
+        let rKey = app/*@START_MENU_TOKEN@*/.keys["r"]/*[[".keyboards.keys[\"r\"]",".keys[\"r\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        rKey.tap()
         
-        let aKey2 = app/*@START_MENU_TOKEN@*/.keys["a"]/*[[".keyboards.keys[\"a\"]",".keys[\"a\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        aKey2.tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"retorno\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-    }
-    
-    func testSortButton(){
-        let codeStaticText = XCUIApplication().staticTexts["Code"]
-        codeStaticText.tap()
-        codeStaticText.tap()
+        let lKey = app/*@START_MENU_TOKEN@*/.keys["l"]/*[[".keyboards.keys[\"l\"]",".keys[\"l\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        lKey.tap()
+        
+        app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
     }
     
     func testSortButtonExist(){
@@ -45,8 +60,9 @@ final class Nano07ChallengeUITests: XCTestCase {
         XCTAssertTrue(sortButton.exists)
     }
     
-    func testSearchBarExist(){
-        let searchBar = XCUIApplication()/*@START_MENU_TOKEN@*/.textFields["SearchBar"]/*[[".textFields[\"Start typing to search...\"]",".textFields[\"SearchBar\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        XCTAssertTrue(searchBar.exists)
+    func testSortButton(){
+        let codeStaticText = XCUIApplication().staticTexts["Code"]
+        codeStaticText.tap()
+        codeStaticText.tap()
     }
 }
