@@ -9,6 +9,9 @@ import UIKit
 
 class CurrencyListViewController: UIViewController {
     // MARK: Variables
+    
+    var vm = ViewModel()
+    
     var data: [String: String] = ["AED": "United Arab Emirates Dirham",
                                   "AFN": "Afghan Afghani",]
     var filteredData: [String : String] = [:]

@@ -43,7 +43,7 @@ class ViewModel: ObservableObject{
     
     func fetchCoins(){
         Task {
-            let result = await apiManager.fetch(httpLink: codeAndName, object: Coins(quotes: ["":0]))
+            let result = await apiManager.fetch(httpLink: codeAndQuotation, object: Coins(quotes: ["":0]))
             switch result {
             case .success(let decodedObject):
                 self.coins = decodedObject.quotes
@@ -59,5 +59,20 @@ class ViewModel: ObservableObject{
                 }
             }
         }
+    }
+    
+    func convert(amount: Float, fromCurrency: String, toCurrency: String) -> Float? {
+        guard let fromRate = coins?["USD\(fromCurrency)"],
+              let toRate = coins?["USD\(toCurrency)"] else {
+            return nil
+        }
+        
+        let amountInUSD = amount / fromRate
+        let convertedAmount = amountInUSD * toRate
+        return convertedAmount
+    }
+    
+    func getCurrencyName(forCode code: String) -> String? {
+        return currenciesNames?[code]
     }
 }
