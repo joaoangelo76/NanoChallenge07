@@ -59,6 +59,7 @@
 		CE95EED42C2DD7990045EF8B /* Nano07ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nano07ChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE95EED62C2DD7990045EF8B /* Nano07ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano07ChallengeUITests.swift; sourceTree = "<group>"; };
 		CE95EED82C2DD7990045EF8B /* Nano07ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano07ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE95EEDF2C2DE4B30045EF8B /* Nano07ChallengeUITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nano07ChallengeUITests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 		3118D2362C2A0E0800200290 = {
 			isa = PBXGroup;
 			children = (
+				CE95EEDF2C2DE4B30045EF8B /* Nano07ChallengeUITests.xctestplan */,
 				3118D2412C2A0E0800200290 /* Nano07Challenge */,
 				CE95EED52C2DD7990045EF8B /* Nano07ChallengeUITests */,
 				3118D2402C2A0E0800200290 /* Products */,
