@@ -22,6 +22,7 @@ class CurrencyListViewController: UIViewController {
         tf.placeholder = "Start typing to search..."
         tf.delegate = self
         tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.accessibilityIdentifier = "SearchBar"
         
         return tf
     }()
