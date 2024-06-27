@@ -9,14 +9,11 @@ import UIKit
 
 class CurrencyListViewController: UIViewController {
     // MARK: Variables
-    
-    var vm = ViewModel()
-    
-    var data: [String: String] = ["AED": "United Arab Emirates Dirham",
-                                  "AFN": "Afghan Afghani",]
-    var filteredData: [String : String] = [:]
-    var filtered = false
-    var sortOption: SortOptions = .codeAscending
+    private var vm = ViewModel()
+    private var data: [String: String] = [:]
+    private var filteredData: [String : String] = [:]
+    private var filtered = false
+    private var sortOption: SortOptions = .codeAscending
     
     // MARK: UI Components
     lazy var searchField: UITextField = {
@@ -56,6 +53,15 @@ class CurrencyListViewController: UIViewController {
     override func viewDidLoad() {
         view.backgroundColor = .systemBackground
         setupUI()
+        if let apiData = vm.currenciesNames {
+            self.data = apiData
+        } else {
+            vm.fetchCurrencies()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+                self.data = self.vm.currenciesNames ?? [:]
+                self.tableView.reloadData()
+            }
+        }
     }
     
     // MARK: Functions
@@ -193,8 +199,25 @@ extension CurrencyListViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? CustomCell else { return }
-        print(cell.currencyCode.text)
+        guard let cellCode = cell.currencyCode.text else { return  }
+        guard let cellName = cell.currencyName.text else { return  }
+        guard let vc = navigationController?.viewControllers.first as? ViewController else { return }
+        
+        switch vc.buttonID {
+        case .none:
+            return
+        case .one:
+            vc.firstCoin.currencies = [:]
+            vc.firstCoin.currencies[cellCode] = cellName
+            vc.button.setTitle(cellCode, for: .normal)
+        case .two:
+            vc.lastCoin.currencies = [:]
+            vc.lastCoin.currencies[cellCode] = cellName
+            vc.buttonTwo.setTitle(cellCode, for: .normal)
+        }
+        
         tableView.deselectRow(at: indexPath, animated: false)
+        navigationController?.popViewController(animated: true)
     }
     
 }
