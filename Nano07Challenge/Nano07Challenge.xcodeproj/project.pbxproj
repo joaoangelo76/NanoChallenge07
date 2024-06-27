@@ -31,6 +31,13 @@
 			remoteGlobalIDString = 3118D23E2C2A0E0800200290;
 			remoteInfo = Nano07Challenge;
 		};
+		CE95EEDA2C2DD7990045EF8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3118D2372C2A0E0800200290 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3118D23E2C2A0E0800200290;
+			remoteInfo = Nano07Challenge;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +56,9 @@
 		3118D2702C2A109900200290 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3182279A2C2B59FE006ECEBB /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
 		3182279C2C2B5A2C006ECEBB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		BAF6A0A42C2DE95F00D5DB2B /* ErrorHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerTests.swift; sourceTree = "<group>"; };
-		BAF6A0A62C2DE99C00D5DB2B /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		CE95EED42C2DD7990045EF8B /* Nano07ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nano07ChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE95EED62C2DD7990045EF8B /* Nano07ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano07ChallengeUITests.swift; sourceTree = "<group>"; };
+		CE95EED82C2DD7990045EF8B /* Nano07ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano07ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE95EED12C2DD7990045EF8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -75,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				3118D2412C2A0E0800200290 /* Nano07Challenge */,
+				CE95EED52C2DD7990045EF8B /* Nano07ChallengeUITests */,
 				3118D2402C2A0E0800200290 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +100,7 @@
 			children = (
 				3118D23F2C2A0E0800200290 /* Nano07Challenge.app */,
 				3118D2652C2A106300200290 /* Nano07ChallengeTests.xctest */,
+				CE95EED42C2DD7990045EF8B /* Nano07ChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,6 +183,15 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		CE95EED52C2DD7990045EF8B /* Nano07ChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE95EED62C2DD7990045EF8B /* Nano07ChallengeUITests.swift */,
+				CE95EED82C2DD7990045EF8B /* Nano07ChallengeUITestsLaunchTests.swift */,
+			);
+			path = Nano07ChallengeUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,6 +230,24 @@
 			productReference = 3118D2652C2A106300200290 /* Nano07ChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CE95EED32C2DD7990045EF8B /* Nano07ChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE95EEDE2C2DD7990045EF8B /* Build configuration list for PBXNativeTarget "Nano07ChallengeUITests" */;
+			buildPhases = (
+				CE95EED02C2DD7990045EF8B /* Sources */,
+				CE95EED12C2DD7990045EF8B /* Frameworks */,
+				CE95EED22C2DD7990045EF8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE95EEDB2C2DD7990045EF8B /* PBXTargetDependency */,
+			);
+			name = Nano07ChallengeUITests;
+			productName = Nano07ChallengeUITests;
+			productReference = CE95EED42C2DD7990045EF8B /* Nano07ChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,6 +262,10 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					3118D2642C2A106300200290 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 3118D23E2C2A0E0800200290;
+					};
+					CE95EED32C2DD7990045EF8B = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 3118D23E2C2A0E0800200290;
 					};
@@ -238,6 +286,7 @@
 			targets = (
 				3118D23E2C2A0E0800200290 /* Nano07Challenge */,
 				3118D2642C2A106300200290 /* Nano07ChallengeTests */,
+				CE95EED32C2DD7990045EF8B /* Nano07ChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -253,6 +302,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3118D2632C2A106300200290 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE95EED22C2DD7990045EF8B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,6 +344,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE95EED02C2DD7990045EF8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE95EED72C2DD7990045EF8B /* Nano07ChallengeUITests.swift in Sources */,
+				CE95EED92C2DD7990045EF8B /* Nano07ChallengeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -295,6 +360,11 @@
 			isa = PBXTargetDependency;
 			target = 3118D23E2C2A0E0800200290 /* Nano07Challenge */;
 			targetProxy = 3118D2692C2A106300200290 /* PBXContainerItemProxy */;
+		};
+		CE95EEDB2C2DD7990045EF8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3118D23E2C2A0E0800200290 /* Nano07Challenge */;
+			targetProxy = CE95EEDA2C2DD7990045EF8B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -519,6 +589,40 @@
 			};
 			name = Release;
 		};
+		CE95EEDC2C2DD7990045EF8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7PL64AUG55;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UITest.Nano07ChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nano07Challenge;
+			};
+			name = Debug;
+		};
+		CE95EEDD2C2DD7990045EF8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7PL64AUG55;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UITest.Nano07ChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nano07Challenge;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -545,6 +649,15 @@
 			buildConfigurations = (
 				3118D26C2C2A106300200290 /* Debug */,
 				3118D26D2C2A106300200290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE95EEDE2C2DD7990045EF8B /* Build configuration list for PBXNativeTarget "Nano07ChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE95EEDC2C2DD7990045EF8B /* Debug */,
+				CE95EEDD2C2DD7990045EF8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

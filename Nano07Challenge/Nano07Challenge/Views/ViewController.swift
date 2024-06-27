@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 10
+        button.accessibilityIdentifier = "Moeda Origem"
         return button
     }()
     
@@ -28,6 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         buttonTwo.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
         buttonTwo.backgroundColor = .systemBlue
         buttonTwo.layer.cornerRadius = 10
+        buttonTwo.accessibilityIdentifier = "Moeda Destino"
         return buttonTwo
     }()
     
@@ -36,6 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textFieldInput.placeholder = "Valor a ser convertido..."
         textFieldInput.borderStyle = .roundedRect
         textFieldInput.clearButtonMode = .whileEditing
+        textFieldInput.accessibilityIdentifier = "TextField"
         return textFieldInput
     }()
     
