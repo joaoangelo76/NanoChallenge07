@@ -15,7 +15,7 @@
 		3118D25D2C2A0EEA00200290 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118D25C2C2A0EEA00200290 /* ViewModel.swift */; };
 		3118D25F2C2A0EF200200290 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118D25E2C2A0EF200200290 /* Model.swift */; };
 		3118D2682C2A106300200290 /* Nano07ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118D2672C2A106300200290 /* Nano07ChallengeTests.swift */; };
-		3118D26F2C2A109200200290 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118D26E2C2A109200200290 /* API.swift */; };
+		3118D26F2C2A109200200290 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118D26E2C2A109200200290 /* APIManager.swift */; };
 		3118D2712C2A109900200290 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118D2702C2A109900200290 /* Persistence.swift */; };
 		3182279B2C2B59FE006ECEBB /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3182279A2C2B59FE006ECEBB /* CurrencyListViewController.swift */; };
 		3182279D2C2B5A2C006ECEBB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3182279C2C2B5A2C006ECEBB /* CustomCell.swift */; };
@@ -43,7 +43,7 @@
 		3118D25E2C2A0EF200200290 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3118D2652C2A106300200290 /* Nano07ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nano07ChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3118D2672C2A106300200290 /* Nano07ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano07ChallengeTests.swift; sourceTree = "<group>"; };
-		3118D26E2C2A109200200290 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		3118D26E2C2A109200200290 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		3118D2702C2A109900200290 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3182279A2C2B59FE006ECEBB /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
 		3182279C2C2B5A2C006ECEBB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		3118D2572C2A0EB100200290 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				3118D26E2C2A109200200290 /* API.swift */,
+				3118D26E2C2A109200200290 /* APIManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 				3182279D2C2B5A2C006ECEBB /* CustomCell.swift in Sources */,
 				3118D2712C2A109900200290 /* Persistence.swift in Sources */,
 				3118D25D2C2A0EEA00200290 /* ViewModel.swift in Sources */,
-				3118D26F2C2A109200200290 /* API.swift in Sources */,
+				3118D26F2C2A109200200290 /* APIManager.swift in Sources */,
 				3118D2452C2A0E0800200290 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
