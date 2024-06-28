@@ -19,8 +19,10 @@
 		3118D2712C2A109900200290 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118D2702C2A109900200290 /* Persistence.swift */; };
 		3182279B2C2B59FE006ECEBB /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3182279A2C2B59FE006ECEBB /* CurrencyListViewController.swift */; };
 		3182279D2C2B5A2C006ECEBB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3182279C2C2B5A2C006ECEBB /* CustomCell.swift */; };
-		BAF6A0A52C2DE95F00D5DB2B /* ErrorHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6A0A42C2DE95F00D5DB2B /* ErrorHandlerTests.swift */; };
-		BAF6A0A72C2DE99C00D5DB2B /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6A0A62C2DE99C00D5DB2B /* ErrorHandler.swift */; };
+		BAA7EFC32C2DFA1F00A15DD7 /* APIDollarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7EFC22C2DFA1F00A15DD7 /* APIDollarTests.swift */; };
+		BAA7EFC52C2DFC8800A15DD7 /* MockAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7EFC42C2DFC8800A15DD7 /* MockAPIData.swift */; };
+		BAF6A0A52C2DE95F00D5DB2B /* (null) in Sources */ = {isa = PBXBuildFile; };
+		BAF6A0A72C2DE99C00D5DB2B /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		3118D2702C2A109900200290 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3182279A2C2B59FE006ECEBB /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
 		3182279C2C2B5A2C006ECEBB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		BAA7EFC22C2DFA1F00A15DD7 /* APIDollarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDollarTests.swift; sourceTree = "<group>"; };
+		BAA7EFC42C2DFC8800A15DD7 /* MockAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIData.swift; sourceTree = "<group>"; };
 		CE95EED42C2DD7990045EF8B /* Nano07ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nano07ChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE95EED62C2DD7990045EF8B /* Nano07ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano07ChallengeUITests.swift; sourceTree = "<group>"; };
 		CE95EED82C2DD7990045EF8B /* Nano07ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano07ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -125,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				3118D2672C2A106300200290 /* Nano07ChallengeTests.swift */,
-				BAF6A0A42C2DE95F00D5DB2B /* ErrorHandlerTests.swift */,
+				BAA7EFC22C2DFA1F00A15DD7 /* APIDollarTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -134,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				3118D26E2C2A109200200290 /* APIManager.swift */,
-				BAF6A0A62C2DE99C00D5DB2B /* ErrorHandler.swift */,
+				BAA7EFC42C2DFC8800A15DD7 /* MockAPIData.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -331,7 +335,8 @@
 				3182279D2C2B5A2C006ECEBB /* CustomCell.swift in Sources */,
 				3118D2712C2A109900200290 /* Persistence.swift in Sources */,
 				3118D25D2C2A0EEA00200290 /* ViewModel.swift in Sources */,
-				BAF6A0A72C2DE99C00D5DB2B /* ErrorHandler.swift in Sources */,
+				BAF6A0A72C2DE99C00D5DB2B /* (null) in Sources */,
+				BAA7EFC52C2DFC8800A15DD7 /* MockAPIData.swift in Sources */,
 				3118D26F2C2A109200200290 /* APIManager.swift in Sources */,
 				3118D2452C2A0E0800200290 /* SceneDelegate.swift in Sources */,
 			);
@@ -342,7 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3118D2682C2A106300200290 /* Nano07ChallengeTests.swift in Sources */,
-				BAF6A0A52C2DE95F00D5DB2B /* ErrorHandlerTests.swift in Sources */,
+				BAF6A0A52C2DE95F00D5DB2B /* (null) in Sources */,
+				BAA7EFC32C2DFA1F00A15DD7 /* APIDollarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,8 +356,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE95EED72C2DD7990045EF8B /* Nano07ChallengeUITests.swift in Sources */,
-				CE95EED92C2DD7990045EF8B /* Nano07ChallengeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
