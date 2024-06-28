@@ -36,6 +36,8 @@ class ViewModel: ObservableObject{
                     print("Network error: \(networkError.localizedDescription)")
                 case .decodingError(let decodingError):
                     print("Decoding error: \(decodingError.localizedDescription)")
+                default:
+                    print("Networking error: \(error.localizedDescription)")
                 }
             }
         }
@@ -56,6 +58,8 @@ class ViewModel: ObservableObject{
                     print("Network error: \(networkError.localizedDescription)")
                 case .decodingError(let decodingError):
                     print("Decoding error: \(decodingError.localizedDescription)")
+                default:
+                    print("Networking error: \(error.localizedDescription)")
                 }
             }
         }
