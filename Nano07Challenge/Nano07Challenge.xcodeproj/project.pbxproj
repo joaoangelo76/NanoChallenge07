@@ -19,6 +19,8 @@
 		3118D2712C2A109900200290 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118D2702C2A109900200290 /* Persistence.swift */; };
 		3182279B2C2B59FE006ECEBB /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3182279A2C2B59FE006ECEBB /* CurrencyListViewController.swift */; };
 		3182279D2C2B5A2C006ECEBB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3182279C2C2B5A2C006ECEBB /* CustomCell.swift */; };
+		BAA7EFC72C2F5A3700A15DD7 /* MockAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7EFC62C2F5A3700A15DD7 /* MockAPIData.swift */; };
+		BAA7EFCE2C2F5BC900A15DD7 /* APIDollarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7EFCD2C2F5BC900A15DD7 /* APIDollarTests.swift */; };
 		BAF6A0A52C2DE95F00D5DB2B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		BAF6A0A72C2DE99C00D5DB2B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		CE5FE7FE2C2DFAA1009E141C /* Nano07ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95EED62C2DD7990045EF8B /* Nano07ChallengeUITests.swift */; };
@@ -57,6 +59,8 @@
 		3118D2702C2A109900200290 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3182279A2C2B59FE006ECEBB /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
 		3182279C2C2B5A2C006ECEBB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		BAA7EFC62C2F5A3700A15DD7 /* MockAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIData.swift; sourceTree = "<group>"; };
+		BAA7EFCD2C2F5BC900A15DD7 /* APIDollarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDollarTests.swift; sourceTree = "<group>"; };
 		CE95EED42C2DD7990045EF8B /* Nano07ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nano07ChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE95EED62C2DD7990045EF8B /* Nano07ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano07ChallengeUITests.swift; sourceTree = "<group>"; };
 		CE95EED82C2DD7990045EF8B /* Nano07ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano07ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				3118D2672C2A106300200290 /* Nano07ChallengeTests.swift */,
+				BAA7EFCD2C2F5BC900A15DD7 /* APIDollarTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				3118D26E2C2A109200200290 /* APIManager.swift */,
+				BAA7EFC62C2F5A3700A15DD7 /* MockAPIData.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 				3118D2712C2A109900200290 /* Persistence.swift in Sources */,
 				3118D25D2C2A0EEA00200290 /* ViewModel.swift in Sources */,
 				BAF6A0A72C2DE99C00D5DB2B /* (null) in Sources */,
+				BAA7EFC72C2F5A3700A15DD7 /* MockAPIData.swift in Sources */,
 				3118D26F2C2A109200200290 /* APIManager.swift in Sources */,
 				3118D2452C2A0E0800200290 /* SceneDelegate.swift in Sources */,
 			);
@@ -342,6 +349,7 @@
 			files = (
 				3118D2682C2A106300200290 /* Nano07ChallengeTests.swift in Sources */,
 				BAF6A0A52C2DE95F00D5DB2B /* (null) in Sources */,
+				BAA7EFCE2C2F5BC900A15DD7 /* APIDollarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
